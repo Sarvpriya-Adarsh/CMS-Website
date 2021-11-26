@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+	<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <title>Weather CMS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <div class="site-content">
+        <div class="site-header">
+            <div class="container">
+                <a href="index.html" class="branding">
+                    <img src="images/logo.png" alt=" 80px" width="80px" class="logo">
+                    <div class="logo-type">
+                        <h1 class="site-title">CMS Weather</h1>
+                        <small class="site-description">Superfast weather news</small>
+                    </div>
+                </a>
+ 
+<!---------new nav ------------------->
+<!-- Default snippet for navigation -->
+                
+                        <div class="main-navigation">
+                            <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+                                  <ul class="menu">
+                                     <li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
+                                     <li class="menu-item"><a href="news.html">Weather News</a></li>
+                                    <li class="menu-item"><a href="about.html">About-us</a></li>
+                                     <li class="menu-item"><a href="contact.html">Contact</a></li>
+                             </ul> <!-- .menu -->
+                            </div> <!-- .main-navigation -->
+
+				</div> <!-- .main-navigation -->
+        </div>
+        </div>
+			<main class="main-content">
+				<div class="container">
+					<div class="breadcrumb">
+						<a href="index.html">Home</a>
+						
+					</div>
+				</div>
+
+<!-- ---------------------------------------------search engine verma-------------------------------------------- -->
+<div class="search">
+    <div class="weather-search">
+        <h1>Get Weather Info </h1>
+        <p>Enter the desired city name to fetch weather information</p>
+       <h1></h1>
+        <br><br>        
+        <input  type="text" id="cityname" name="fname"  placeholder="   Enter the name of the city"> 
+
+        <button onclick="srch()">SEARCH</button>
+    </div>
+    
+</div>
+</div>
+</div>
+<!------------------------------------------------ 1 day weather ----------------------------------------------------->
+
+<div class="hours">
+    <h1 class="city"></h1>
+    <div class="hours-title">
+        <div class="hours-pic"><img src="images/logo.png" alt='Weather'></div>
+        <h1 class="hours-temp" > <span id='temp'>--</span> <span>&#176;</span>C</h1>
+    </div>
+        <!---------------------------------------------------- info-table -------------------------------------------->
+        <div class="grid-container2" style="overflow: hidden;">
+            <div class="grid-item2">
+                <div id="App2">
+                    <table class="table-info">
+                    <tr>
+                        <td>Pressure</td>
+                        <td><span id="pressure">--</span> mb</td>
+                    </tr>
+                    <tr>
+                        <td>Humidity</td>
+                        <td><span id="humidity">--</span> %</td>
+                    </tr>
+                    <tr>
+                        <td>Visibility</td>
+                        <td><span id="visibility">--</span> m</td>
+                    </tr>
+                    <tr>
+                        <td>Wind</td>
+                        <td><span id="wind">--</span> km/h</td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+        </div>
+</div>
+
+    <div class="grid-container" style="overflow: hidden;">
+        <div class="grid-item">
+            <div id="App1">
+                <div id="Top1">
+                    <p class="bottomCardTitle1">6 A.M.</p>
+                </div>
+                <div id="Bottom1">
+                    <li class="bottomCardTextList1">Temperature : <span id="t1">--</span><span>&#176;</span>C</li>
+                    <li class="bottomCardTextList1">Wind : <span id="w1">--</span> km/h</li>
+                    <li class="bottomCardTextList1">Humidity : <span id="h1">--</span> %</li>
+                    <li class="bottomCardTextList1"><span id="c1">--</span></li>
+                </div>
+            </div>        
+        </div>
+
+
+        <div class="grid-item">
+            <div id="App1">
+                <div id="Top1">
+                    <p class="bottomCardTitle1">12 P.M.</p>
+                </div>
+                <div id="Bottom1">
+                    <li class="bottomCardTextList1">Temperature : <span id="t2">--</span><span>&#176;</span>C</li>
+                    <li class="bottomCardTextList1">Wind : <span id="w2">--</span> km/h</li>
+                    <li class="bottomCardTextList1">Humidity : <span id="h2">--</span> %</li>
+                    <li class="bottomCardTextList1"><span id="c2">--</span></li>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="grid-item">
+            <div id="App1">
+                <div id="Top1">
+                    <p class="bottomCardTitle1">6 P.M.</p>
+                </div>
+                <div id="Bottom1">
+                    <li class="bottomCardTextList1">Temperature : <span id="t3">--</span><span>&#176;</span>C</li>
+                    <li class="bottomCardTextList1">Wind : <span id="w3">--</span> km/h</li>
+                    <li class="bottomCardTextList1">Humidity : <span id="h3">--</span> %</li>
+                    <li class="bottomCardTextList1"><span id="c3">--</span></li>
+                </div>
+            </div>           
+        </div>
+
+
+        
+        <div class="grid-item">
+            <div id="App1">
+                <div id="Top1">
+                    <p class="bottomCardTitle1">12 A.M.</p>
+                </div>
+                <div id="Bottom1">
+                    <li class="bottomCardTextList1">Temperature : <span id="t4">--</span><span>&#176;</span>C</li>
+                    <li class="bottomCardTextList1">Wind : <span id="w4">--</span> km/h</li>
+                    <li class="bottomCardTextList1">Humidity : <span id="h4">--</span> %</li>
+                    <li class="bottomCardTextList1"><span id="c4">--</span></li>
+                </div>
+            </div>            
+        </div>
+    
+    </div>
+</div>
+
+<!------------------------------------------ 7 day forecast---------------------------------------------------- -->
+<div class="hours" style="margin-bottom: relative;">
+    <div class="hours-title">
+        <div class="hours-pic1"><img src="./logo.jfif2222222222222"></div>
+        <h1 class="hours-temp1" >7 Day Forecast</h1>
+    </div>
+
+    <div class="grid-container" style="overflow: hidden;">
+        <div class="grid-item">
+            <div id="App">
+                <div id="Top">
+                <p class="bottomCardTitle"><span id="d1">Next Day</span></p><br>
+                <div id="TopMiddlePic" class='1'><img src="img/sunny.png"></div>
+                </div>
+                <div id="Bottom">
+                    <p class="bottomCardText">Temperature : <span id="dt1">--</span> <span>&#176;</span>C</p>
+                    <p class="bottomCardText">Wind : <span id="dw1">--</span> km/h</p>
+                    <p class="bottomCardText">Humidity : <span id="dh1">--</span> %</p>
+                    <p class="bottomCardText"><span id="dc1">--</span></p>
+                </div>
+            </div>        
+        </div>
+
+
+        <div class="grid-item">
+            <div id="App">
+                <div id="Top">
+                <p class="bottomCardTitle"><span id="d2">Day 2</span></p>
+                <div id="TopMiddlePic" class='2'><img src="img/thunder.png"></div>
+                </div>
+                <div id="Bottom">
+                    <p class="bottomCardText">Temperature : <span id="dt2">--</span> <span>&#176;</span>C</p>
+                    <p class="bottomCardText">Wind : <span id="dw2">--</span> km/h</p>
+                    <p class="bottomCardText">Humidity : <span id="dh2">--</span> %</p>
+                    <p class="bottomCardText"><span id="dc2">--</span></p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="grid-item">
+            <div id="App">
+                <div id="Top">
+                <p class="bottomCardTitle"><span id="d3">Day 3</span></p>
+                <div id="TopMiddlePic" class='3'><img src="img/cloudy.png"></div>
+                </div>
+                <div id="Bottom">
+                    <p class="bottomCardText">Temperature : <span id="dt3">--</span> <span>&#176;</span>C</p>
+                    <p class="bottomCardText">Wind : <span id="dw3">--</span> km/h</p>
+                    <p class="bottomCardText">Humidity : <span id="dh3">--</span> %</p>
+                    <p class="bottomCardText"><span id="dc3">--</span></p>
+                </div>
+            </div>           
+        </div>
+
+
+        
+        <div class="grid-item">
+            <div id="App">
+                <div id="Top">
+                <p class="bottomCardTitle"><span id="d4">Day 4</span></p>
+                <div id="TopMiddlePic" class='4'><img src="img/raining.png"></div>
+                </div>
+                <div id="Bottom">
+                    <p class="bottomCardText">Temperature : <span id="dt4">--</span> <span>&#176;</span>C</p>
+                    <p class="bottomCardText">Wind : <span id="dw4">--</span> km/h</p>
+                    <p class="bottomCardText">Humidity : <span id="dh4">--</span> %</p>
+                    <p class="bottomCardText"><span id="dc4">--</span></p>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+
+
+
+    
+    <div class="grid-container1" style="overflow: hidden;">
+        <div class="grid-item1">
+            <div id="App">
+                <div id="Top">
+                <p class="bottomCardTitle"><span id="d5">Day 5</span></p>
+                <div id="TopMiddlePic" class='5'><img src="img/snow.png"></div>
+                </div>
+                <div id="Bottom">
+                    <p class="bottomCardText">Temperature : <span id="dt5">--</span> <span>&#176;</span>C</p>
+                    <p class="bottomCardText">Wind : <span id="dw5">--</span> km/h</p>
+                    <p class="bottomCardText">Humidity : <span id="dh5">--</span> %</p>
+                    <p class="bottomCardText"><span id="dc5">--</span></p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="grid-item">
+            <div id="App">
+                <div id="Top">
+                <p class="bottomCardTitle"><span id="d6">Day 6</span></p>
+                <div id="TopMiddlePic" class='6'><img src="img/suncloud.png"></div>
+                </div>
+                <div id="Bottom">
+                    <p class="bottomCardText">Temperature : <span id="dt6">--</span> <span>&#176;</span>C</p>
+                    <p class="bottomCardText">Wind : <span id="dw6">--</span> km/h</p>
+                    <p class="bottomCardText">Humidity : <span id="dh6">--</span> %</p>
+                    <p class="bottomCardText"><span id="dc6">--</span></p>
+                </div>
+            </div>           
+        </div>
+
+
+        
+        <div class="grid-item">
+            <div id="App">
+                <div id="Top">
+                <p class="bottomCardTitle"><span id="d7">Day 7</span></p>
+                <div id="TopMiddlePic" class='7'><img src="img/thunder.png"></div>
+                </div>
+                <div id="Bottom">
+                    <p class="bottomCardText">Temperature : <span id="dt7">--</span> <span>&#176;</span>C</p>
+                    <p class="bottomCardText">Wind : <span id="dw7">--</span> km/h</p>
+                    <p class="bottomCardText">Humidity : <span id="dh7">--</span> %</p>
+                    <p class="bottomCardText"><span id="dc7">--</span></p>
+                </div>
+            </div>            
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+    <!-- footer------------------------------------------------------------------------------------------- -->
+    <div class="footer">
+        
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <form action="https://mail.google.com/mail/u/0/#inbox?compose=new" class="subscribe-form">
+                            <input type="text" placeholder="Enter your email to recieve latest updates.">
+
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1">
+                      
+                        </div>
+                        
+                    </div>
+                     <p class="colophon">Copyright 2020 CMS Weather. Designed by Sarvpriya Adarsh and Pranjal Verma. All rights reserved</p>
+                </div>
+
+               
+            </div>
+        </footer> <!-- .site-footer -->
+    </div>
+ 
+</body>
+</html>
